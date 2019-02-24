@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccffdd"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/status"
+        android:text="Idle"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/world_a"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:layout_weight="5"
+            android:background="@drawable/vacum_cleaner"
+            android:textAlignment="viewStart"
+            android:textColor="#EB0955" />
+
+        <Button
+            android:id="@+id/world_b"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:textAlignment="viewStart"
+            android:textColor="#EB0955"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/world_d"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:textAlignment="viewStart"
+            android:textColor="#EB0955"
+            android:layout_weight="5" />
+
+        <Button
+            android:id="@+id/world_c"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"
+            android:textAlignment="viewStart"
+            android:textColor="#EB0955"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/selected_world"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:hint="World"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:id="@+id/add_dart_btn"
+        android:text="Add Dart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/clean_dart_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="clean Dart"/>
+
+
+</LinearLayout>
