@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                         // working for world A
-                        
+
                         try {
-                            Thread.sleep(1500);
+                            Thread.sleep(2000);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -91,12 +91,12 @@ public class MainActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                status.setText("Checking dart in World A");
+                                status.setText("Checking dirt in World A");
                             }
                         });
 
                         try {
-                            Thread.sleep(1500);
+                            Thread.sleep(2000);
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    status.setText("No dart found in World A. Moving to World B.");
+                                    status.setText("No dirt found in World A. Moving to World B.");
                                     worldA.setBackgroundResource(R.color.button_color);
                                     worldB.setBackgroundResource(R.drawable.vacum_cleaner);
                                 }
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    status.setText("Dart found and has started cleaning");
+                                    status.setText("dart found and has started cleaning");
                                 }
                             });
 
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    status.setText("Dart has removed. Moving to World B.");
+                                    status.setText("dart has removed. Moving to World B.");
                                     dartA = 0;
                                     worldA.setText("");
                                     worldA.setBackgroundResource(R.color.button_color);
@@ -137,6 +137,191 @@ public class MainActivity extends AppCompatActivity {
 
                         }
 
+                        // working for world B
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                status.setText("Checking dirt in World B");
+                            }
+                        });
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        if (dartB == 0) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("No dirt found in World B. Moving to World B.");
+                                    worldB.setBackgroundResource(R.color.button_color);
+                                    worldC.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+                        } else {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt found and has started cleaning");
+                                }
+                            });
+
+                            try {
+                                Thread.sleep(3000);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt has removed. Moving to World C.");
+                                    dartB = 0;
+                                    worldB.setText("");
+                                    worldB.setBackgroundResource(R.color.button_color);
+                                    worldC.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+
+                        }
+
+                        // working for world C
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                status.setText("Checking dirt in World C");
+                            }
+                        });
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        if (dartC == 0) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("No dirt found in World C. Moving to World D.");
+                                    worldC.setBackgroundResource(R.color.button_color);
+                                    worldD.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+                        } else {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt found and has started cleaning");
+                                }
+                            });
+
+                            try {
+                                Thread.sleep(3000);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt has removed. Moving to World C.");
+                                    dartC = 0;
+                                    worldC.setText("");
+                                    worldC.setBackgroundResource(R.color.button_color);
+                                    worldD.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+
+                        }
+
+                        // working for world d
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                status.setText("Checking dirt in World D");
+                            }
+                        });
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        if (dartD == 0) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("No dirt found in World D. All dart has been removed.");
+                                    worldD.setBackgroundResource(R.color.button_color);
+                                    worldA.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+                        } else {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt found and has started cleaning");
+                                }
+                            });
+
+                            try {
+                                Thread.sleep(3000);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    status.setText("dirt has been removed & All World is clean. Moving to World A.");
+                                    dartD = 0;
+                                    worldD.setText("");
+                                    worldD.setBackgroundResource(R.color.button_color);
+                                    worldA.setBackgroundResource(R.drawable.vacum_cleaner);
+                                }
+                            });
+
+                        }
+
+                        // completed all world
+
+                        try {
+                            Thread.sleep(2000);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                status.setText("Idle");
+                            }
+                        });
                         Looper.loop();
 
                     }

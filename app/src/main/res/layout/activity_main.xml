@@ -71,13 +71,17 @@
 
     <EditText
         android:id="@+id/selected_world"
-        android:layout_width="150dp"
+        android:layout_width="230dp"
         android:layout_height="60dp"
-        android:hint="World"
+        android:hint="Select World A, B, C or D."
+        android:textColor="#009688"
         android:layout_marginTop="10dp"/>
     <Button
         android:id="@+id/add_dart_btn"
-        android:text="Add Dart"
+        android:text="Add Dirt"
+        android:background="#C82333"
+        android:layout_margin="5dp"
+        android:textColor="#fff"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp" />
@@ -86,7 +90,10 @@
         android:id="@+id/clean_dart_btn"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="clean Dart"/>
+        android:background="#218838"
+        android:layout_margin="5dp"
+        android:textColor="#fff"
+        android:text="clean Dirt"/>
 
 
 </LinearLayout>
